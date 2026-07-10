@@ -9,7 +9,7 @@ print("=" * 50)
 a = 15
 b = 4
 
-print(f"a = {a}, b = {b}")
+print(f"a = {a}, b = {b}") # a = 15, b = 4
 print()
 
 # Addition (+)
@@ -60,6 +60,8 @@ print(f"{num1} - {num2} = {num1 - num2}")
 print(f"{num1} * {num2} = {num1 * num2}")
 
 # ตรวจสอบการหารด้วยศูนย์
+# = ใช้เวลาระบุค่า เช่นตัวแปร , == ใช้เวลาถาม หรือระบุเงื่อนไข เช่น if
+# != คือ ไม่เท่ากับ
 if num2 != 0:
     print(f"{num1} / {num2} = {num1 / num2}")
     print(f"{num1} // {num2} = {num1 // num2}")
@@ -75,6 +77,10 @@ print()
 # DEMO 3: Operator Precedence
 # =============================================================================
 
+# + - * / // % ** ในไพทอน
+#1. **
+#2. * / // %
+#3. + -
 print("=" * 50)
 print("DEMO 3: Operator Precedence")
 print("=" * 50)
