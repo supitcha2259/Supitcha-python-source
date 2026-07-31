@@ -29,7 +29,7 @@ print(fruits)  # ['pear', 'cherry', 'orange']
 fruits.append("grape")           # Add to end
 print(fruits)  # ['pear', 'cherry', 'orange', 'grape']
 
-fruits.insert(1, "banana")       # Insert at specific position
+fruits.insert(1, "banana")       # Insert at specific position แทรกเข้า ณ index เบอร์ 1
 print(fruits)  # ['pear', 'banana', 'cherry', 'orange', 'grape']
 
 fruits.extend(["kiwi", "apple"]) # Add multiple elements
