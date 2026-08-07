@@ -8,8 +8,8 @@
 print("=== PART 1: BASIC FUNCTIONS ===")
 
 # Example 1: Simple function without parameters
-def say_hello():
-    """A simple function that prints a greeting"""
+def say_hello(): #นิยามชื่อ fn ตัวอย่างคือ ฟังก์ชันชื่อ say_hello() ดูจากชื่อและ() ไม่มีพารามิเตอร์หรือข้อมูลนำเข้า
+    """A simple function that prints a greeting""" #comment อีกแบบ แต่จะพิมพ์ได้ทีเดียวหลายบรรทัด
     print("Hello, World!")
     print("Welcome to Python functions!")
 
@@ -65,8 +65,9 @@ def calculate_rectangle_area(length, width):
     print()
 
 print("Calculating rectangle areas:")
-calculate_rectangle_area(5, 3)
+calculate_rectangle_area(5, 3) # length = 5 and width = 3
 calculate_rectangle_area(10, 7)
+#ใช้ครบทุกตัว = จบโปรแกรม
 
 # =============================================================================
 # PART 3: FUNCTIONS WITH RETURN VALUES
@@ -117,13 +118,17 @@ result = multiply(4, 5) + square(3)
 print(f"multiply(4, 5) + square(3) = {multiply(4, 5)} + {square(3)} = {result}")
 print()
 
+"""Output: Using return values in expressions:
+multiply(4, 5) + square(3) = 20 + 9 = 29"""
+
+
 # =============================================================================
 # PART 4: DEFAULT PARAMETERS
 # =============================================================================
 print("\n=== PART 4: DEFAULT PARAMETERS ===")
 
 # Example 1: Function with default parameter
-def greet_with_title(name, title="Mr./Ms."):
+def greet_with_title(name, title="Mr./Ms."): #title="Mr./Ms." เป็นการบอกให้ส่งหรือไม่ก็ได้ในนี้(หากส่งตัวอื่น เช่น Mrs. Dr. ก็ทำได้) แต่ส่งได้ไม่เกิน 2 ตัว
     """Greets person with optional title"""
     print(f"Hello, {title} {name}!")
 
@@ -145,7 +150,7 @@ create_profile("Charlie", 30, "USA")  # All specified
 print()
 
 # Example 3: Power function with default exponent
-def power(base, exponent=2):
+def power(base, exponent=2): #ถ้าไม่ส่งค่า exponent จะอนุมานให้เป็น 2 แต่ถ้าส่งก็จะเป็นค่าตามที่รับ
     """Calculates base raised to exponent (default: square)"""
     return base ** exponent
 
@@ -170,7 +175,7 @@ def demonstrate_scope():
     local_message = "I'm a local variable"
     
     # Accessing global variable
-    print(f"Inside function - Global: {global_message}")
+    print(f"Inside function - Global: {global_message}") #เรียกใช้โดยตรงได้
     print(f"Inside function - Local: {local_message}")
     
     # Modifying global variable (need global keyword)
@@ -183,7 +188,7 @@ print(f"Before function call - Counter: {counter}")
 demonstrate_scope()
 print(f"After function call - Counter: {counter}")
 print(f"Outside function - Global: {global_message}")
-# print(local_message)  # This would cause an error!
+# print(local_message)  # This would cause an error! เพราะมันจำกัดแค่ใน local ที่อยู่ใน def ไม่ใช่ global ที่เรียกใช้ได้ตรงๆ เพราะอยู่นอกฟังก์ชัน
 print()
 
 # =============================================================================
@@ -212,13 +217,13 @@ for score in test_scores:
     print(f"Score {score} = Grade {grade}")
 print()
 
-# Example 2: Password validator
+#*** Example 2: Password validator ***
 def is_strong_password(password):
     """Checks if password meets strength requirements"""
     if len(password) < 8:
         return False, "Password too short (minimum 8 characters)"
     
-    has_letter = any(c.isalpha() for c in password)
+    has_letter = any(c.isalpha() for c in password) #loop ที่วิ่งทุกตัวและตรวจสอบว่าใช่หรือไม่ทีละตัว , any คือดูว่ามีสักตัวว่าผิดรึเปล่า
     has_number = any(c.isdigit() for c in password)
     
     if not has_letter:
