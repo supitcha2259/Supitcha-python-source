@@ -21,7 +21,7 @@ print()
 # Example 2: Function that performs a task
 def draw_separator():
     """Draws a line separator"""
-    print("-" * 40)
+    print("-" * 40) # * operator คือ - ทั้งหมด 40 ตัว
 
 draw_separator()
 print("This is between separators")
@@ -39,7 +39,7 @@ def greet_person(name):
     print(f"Hello, {name}! Nice to meet you.")
 
 print("Calling greet_person with different names:")
-greet_person("Alice")
+greet_person("Alice") #ต้องส่งข้อมูลอย่างน้อย 1 ค่า เป็นอะไรก็ได้(ที่โปรแกรมทำให้ได้)
 greet_person("Bob")
 greet_person("Charlie")
 print()
