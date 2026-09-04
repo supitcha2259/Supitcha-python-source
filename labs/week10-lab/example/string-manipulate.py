@@ -5,13 +5,16 @@
 # 1. STRING CREATION AND BASIC OPERATIONS
 # ===========================
 
+"""many 
+comment """
+
 print("=== STRING CREATION ===")
 # Different ways to create strings
 name = "India"
 graduate = 'B.E.'
 multiline = """This is a
 multiline string
-example"""
+example""" #str หลายบรรทัด
 
 print(f"name = {name}")
 print(f"graduate = {graduate}")
@@ -41,7 +44,7 @@ except ValueError:
 print("\n=== STRING INDEXING ===")
 fruit = 'banana'
 print(f"fruit = {fruit}")
-print(f"fruit[1] = {fruit[1]}")  # 'a'
+print(f"fruit[1] = {fruit[1]}")  # 'a' นับตรง index = 1 
 
 n = 3
 w = fruit[n - 1]  # fruit[2]
@@ -107,7 +110,7 @@ print("\n=== ITERATING THROUGH STRING ===")
 count = 0
 text = 'Hello World'
 for letter in text:
-    if letter == 'l':
+    if letter == 'l': #นับ l จากตัวแปร text
         count += 1
 print(f"{count} letters 'l' found in '{text}'")
 
@@ -116,7 +119,8 @@ print(f"{count} letters 'l' found in '{text}'")
 # ===========================
 
 print("\n=== MEMBERSHIP TEST ===")
-print("'a' in 'program':", 'a' in 'program')  # True
+print('Boonchoo', 'Love', 'Python')
+print("'a' in 'program':", 'a' in 'program')  # True มี a อยู่ใน program หรือไม่
 print("'at' not in 'battle':", 'at' not in 'battle')  # False
 
 # ===========================
@@ -202,10 +206,10 @@ text = "welcome to the world of python"
 
 # Case methods
 print(f"Original: {text}")
-print(f"Upper: {text.upper()}")
-print(f"Lower: {text.lower()}")
+print(f"Upper: {text.upper()}") #ทุกตัวเป็นพิมพ์ใหญ่
+print(f"Lower: {text.lower()}") #ทุกตัวเป็นพิมพ์เล็ก
 print(f"Title: {text.title()}")
-print(f"Capitalize: {text.capitalize()}")
+print(f"Capitalize: {text.capitalize()}") #ทุกตัวแรกเป็นพิมพ์ใหญ่
 
 # Search methods
 print(f"Find 'world': {text.find('world')}")
@@ -263,10 +267,10 @@ for comparison, result in comparisons:
     print(f"{comparison}: {result}")
 
 # ===========================
-# 15. STRING SLICING
+# 15. STRING SLICING 
 # ===========================
 
-print("\n=== STRING SLICING ===")
+print("\n=== STRING SLICING ===") #ตัดเอาแต่ส่วนที่ต้องการ
 text = "python"
 print(f"Original string: {text}")
 
