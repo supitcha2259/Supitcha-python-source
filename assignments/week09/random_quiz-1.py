@@ -25,3 +25,34 @@ Example
     Congratulations! You won in 3 attempts!
 
 """
+
+import random 
+
+secret_number = random.randint(1,20)
+        
+for i in range(1,7):
+    while True:
+        try:
+            guess = int(input("Enter your guess: "))
+            break
+        
+        except ValueError:
+            print("Please enter a number only.")
+            
+    if guess == secret_number:
+        print(f"Congratulations! You won in {i}/6 attempt!")
+        break
+            
+    elif guess > secret_number:
+        print(f"Too high! Try again.")
+        print(f"You have used this many rounds: {i}/6 attempt.")
+     
+    else:
+        print(f"Too low! Try again.")
+        print(f"You have used this many rounds: {i}/6 attempt.")
+    
+if i == 6 and guess != secret_number:
+    print("You lose.")
+    
+else:
+    print(f"You win.")

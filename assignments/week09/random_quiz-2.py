@@ -44,9 +44,10 @@ import random
 
 def get_parity_hint(number):
     if number % 2 == 0:
-        return "HINT: The number is even" 
+        return "HINT: The number is even"
     else:
         return "HINT: The number is odd"
+
 
 def get_divisibility_hint(number):
     if number % 3 == 0:
@@ -56,10 +57,54 @@ def get_divisibility_hint(number):
     else:
         return "HINT: The number is NOT divisible by 3 or 5"
 
+
 def get_range_hint(number, current_min=1, current_max=100):
-    # Return narrowed range around the number
-    pass
+    # Make a 25-number window around the secret number
+    new_min = max(current_min, number - 12)
+    new_max = min(current_max, number + 12)
+
+    return f"HINT: The number is between {new_min} and {new_max}"
+
 
 def get_thefirst_digit_hint(number):
-    # Retun the first digit of the number
-    pass
+    first_digit = int(str(number)[0])
+    return f"HINT: The first digit is {first_digit}"
+
+
+secret_number = random.randint(1, 100)
+attempt = 0
+
+print("=== Enhanced GUESSING GAME ===")
+print("Guess my number between 1 and 100!")
+print("You have unlimited attempts.")
+
+while True:
+    try:
+        guess = int(input(f"Attempt {attempt + 1} - Enter your guess: "))
+    except ValueError:
+        print("Please enter a number only.")
+        continue
+
+    attempt += 1
+
+    if guess == secret_number:
+        print(f"Congratulations! You won in {attempt} attempts!")
+        break
+
+    elif guess > secret_number:
+        print("Too high! Try again.")
+
+    else:
+        print("Too low! Try again.")
+
+    if attempt == 3:
+        print(get_parity_hint(secret_number))
+
+    elif attempt == 5:
+        print(get_divisibility_hint(secret_number))
+
+    elif attempt == 7:
+        print(get_range_hint(secret_number))
+
+    elif attempt == 10:
+        print(get_thefirst_digit_hint(secret_number))

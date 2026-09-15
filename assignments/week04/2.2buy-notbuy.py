@@ -4,7 +4,7 @@ price = []
 print("Enter price of 6 items:")
 for i in range(1,7):
     price = int(input(f"Item {i}: "))
-    prices.append(price)
+    price.append(price)
 
 print()
 #budget total
@@ -14,8 +14,8 @@ print()
 current_total = 0
 bought_items = []
 
-for i in range(len(prices)):
-    price = prices[i]
+for i in range(len(price)):
+    price = price[i]
 
     if current_total + price <= budget:
         status = "buy"
