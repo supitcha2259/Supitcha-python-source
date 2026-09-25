@@ -33,9 +33,11 @@ print(f"All cars have {Car.wheels} wheels")
 print(f"Vehicle type: {Car.get_vehicle_type()}")
 
 # Accessing instance attributes
-print(car1.get_info())
+print(car1.get_info()) #เข้าถึง method
 print(car2.get_info())
 
 # Using methods
 print(car1.drive(100))
 print(car2.drive(250))
+
+print(car1.drive(200)) #100 + 200 = 300
