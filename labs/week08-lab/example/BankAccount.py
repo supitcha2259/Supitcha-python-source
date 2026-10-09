@@ -28,13 +28,14 @@ class BankAccount:
     # Property decorator for read-only access
     @property
     def transaction_history(self):
-        return self.__transaction_history.copy()
+        return self.__transaction_history.copy() #อ่านผ่านการทำสำเนาของข้อมูลนี้เท่านั้น
     
-    def __str__(self):
+    def __str__(self): #Method to str
         return f"Account {self.account_number}: Balance ${self.__balance}"
 
 # Usage example
 account = BankAccount("12345", 1000)
+account.balance = 1000000 #การเข้าถึงโดยตรง(ซึ่งไม่ควรทำ)
 print(account.get_balance())  # 1000
 account.deposit(500)
 account.withdraw(200)
