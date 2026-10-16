@@ -23,6 +23,9 @@ class ClassName:
     def method_name(self): 
         # Instance method
         return something
+    
+    def method_name2(self):
+        return ...
 
 # how to create => เอาในคลาสมาใช้
 myObj = ClassName(parameters)
